@@ -1,0 +1,104 @@
+.accountMainContainer{
+    border: 1px solid #ccc;
+    padding: 200px
+}
+
+.accountTopLevelContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .accountTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .editButton {
+    padding: 10px 20px;
+    background-color: #5c5de1;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .editButton:hover {
+    background-color: #4949a3;
+  }
+  
+  .editFormContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .editInput {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .editInput:focus {
+    outline: none;
+    border-color: #5c5de1;
+  }
+  
+  .saveChangesButton,
+  .cancelButton {
+    padding: 10px 20px;
+    margin: 8px 4px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .saveChangesButton {
+    background-color: #5c5de1;
+    color: white;
+  }
+  
+  .saveChangesButton:hover {
+    background-color: #4949a3;
+  }
+  
+  .cancelButton {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .cancelButton:hover {
+    background-color: #999;
+  }
+  
+  .errorContainer {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .userName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .userEmail {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .AccountUserIcon {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    margin: 20px auto; /* Centers the image */
+    display: block; /* Centers the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the image */
+}

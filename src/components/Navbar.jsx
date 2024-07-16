@@ -8,6 +8,7 @@ export default function Navbar() {
 
   function handleLogout() {
     localStorage.removeItem('token');
+    window.location.reload()
     logout();
   }
 

@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { useUserCart } from "../../store/user-cart";
 import Navbar from "../Navbar";
-
+import "./Login-Register.css";
 export default function Register() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -13,21 +13,23 @@ export default function Register() {
   const registerMutation = useMutation({
     mutationFn: register,
     onSuccess: () => {
-      navigate('/account')
-    }
-  })
+      navigate("/account");
+    },
+  });
   const navigate = useNavigate();
   const { setUser, setLoggedIn } = useUserCart();
 
-
   async function register(info) {
     try {
-      const response = await axios.post("https://ecom-project-backend-gwbx.onrender.com/auth/register", info);
+      const response = await axios.post(
+        "https://ecom-project-backend-gwbx.onrender.com/auth/register",
+        info
+      );
       if (response.data.token) {
         setUser({
-          token: response.data.token
+          token: response.data.token,
         });
-        window.localStorage.setItem('token', response.data.token);
+        window.localStorage.setItem("token", response.data.token);
         setLoggedIn(true);
       }
       return response;
@@ -44,8 +46,8 @@ export default function Register() {
       lastName: lastName ? lastName : "NoName",
       email: email,
       password: password,
-    }
-    registerMutation.mutate(info)
+    };
+    registerMutation.mutate(info);
   }
 
   return (
