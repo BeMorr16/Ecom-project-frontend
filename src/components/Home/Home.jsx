@@ -35,7 +35,7 @@ function Home() {
   });
   const navigate = useNavigate();
   const { user, cart, loggedIn, addToCart, fetchCart } = useUserCart();
-  const [notification, setNotification] = useState(false);
+  
 console.log(cart)
   if (isLoading) {
     return (
@@ -62,12 +62,7 @@ console.log(cart)
   async function addButton(itemId) {
     await addToCart(user.id, itemId, 1);
     await fetchCart(user.id)
-    setNotification(true);
-
-    // Hide the notification after 3 seconds
-    setTimeout(() => {
-      setNotification(false);
-    }, 3000);
+    alert("Item Added to Cart")
   }
   console.log(user.id);
   return (
@@ -121,11 +116,7 @@ console.log(cart)
                   Add 1 to cart
                 </button>
               )}
-              {notification && (
-        <div className="notification">
-          Added to cart
-        </div>
-      )}
+              
 
             </div>
           );
