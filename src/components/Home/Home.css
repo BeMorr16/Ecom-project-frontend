@@ -1,0 +1,100 @@
+/* Home.css */
+
+/* Navbar styles */
+
+
+/* Title styles */
+.home-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #333;
+  
+}
+
+/* Form container styles */
+.home-form-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+/* Form label styles */
+.home-form-label {
+    color: #333;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Form select styles */
+.home-form-select {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+/* Item container styles */
+.home-item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+}
+
+/* Individual item styles */
+.home-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #f6fbff;
+  text-align: center;
+  box-shadow: 7px 10px 5px rgb(85, 88, 104);
+  transition: transform 0.3s;
+}
+
+.home-item:hover {
+  transform: scale(1.05);
+}
+
+/* Item title styles */
+.home-item-title {
+  font-size: .8rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #333;
+  height: 6rem;
+  overflow: hidden;
+}
+
+/* Item image styles */
+.home-item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 0rem;
+}
+
+/* Add to cart button styles */
+.home-add-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #557291;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: 2px solid rgb(171, 228, 255);
+  outline-offset: -4px;
+  transition: background-color 0.3s, outline-offset 0.3s;
+}
+
+.home-add-button:hover {
+  background-color: #0062ca;
+  outline-offset: 2px;
+  outline: 2px solid rgb(56, 70, 133);
+}

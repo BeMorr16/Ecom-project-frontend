@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import "./App.css";
+import "../App.css";
+import "./Home.css"
 import axios from "axios";
 import Navbar from "../Navbar";
 import { useState } from "react";
@@ -59,41 +60,51 @@ console.log(cart)
   console.log(user.id);
   return (
     <>
-      <Navbar />
-      <h1>Products</h1>
-      <div>
+    
+      <Navbar className="home-navbar" />
+      <h1 className="home-title">Search our Store</h1>
+      <div className="home-form-container">
         <form>
-          <label htmlFor="categories">Select a category:</label>
+          <label htmlFor="categories" className="home-form-label">
+            Select a category:
+          </label>
           <select
             name="categories"
             onChange={handleCategoryChange}
             value={selectedCategory}
+            className="home-form-select"
           >
             <option value="all">All</option>
-            <option value="jewelery">Jewlery</option>
-            <option value="men&#39;s clothing">Men&#39;s Clothing</option>
-            <option value="women&#39;s clothing">Women&#39;s clothing</option>
+            <option value="jewelery">Jewelry</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's clothing</option>
             <option value="electronics">Electronics</option>
           </select>
         </form>
       </div>
-      <div>
+      <div className="home-item-container">
         {data?.map((item) => {
           return (
-            <div key={item.id}>
+            <div key={item.id} className="home-item">
               <div
                 onClick={() => {
                   navigate(`/products/${item.id}`);
                 }}
+                className="home-item-content"
               >
-                <h3>{item.title}</h3>
-                <img src={item.image} alt={item.title} />
+                <h3 className="home-item-title">{item.title}</h3>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="home-item-image"
+                />
               </div>
               {loggedIn && (
                 <button
                   onClick={() => {
                     addToCart(user.id, item.id, 1);
                   }}
+                  className="home-add-button"
                 >
                   Add 1 to cart
                 </button>
