@@ -43,9 +43,8 @@ export const useUserCart = create((set, get) => ({
     },
     checkOutCart: async (arrayOfCartItemId) => {
         try {
-            for (let cartItemId of arrayOfCartItemId) {
-                const response = await axios.delete(`https://ecom-project-backend-gwbx.onrender.com/api/cart/delete/${cartItemId}/0`);
-                return response
+            for await (let cartItemId of arrayOfCartItemId) {
+                await axios.delete(`https://ecom-project-backend-gwbx.onrender.com/api/cart/delete/${cartItemId}/0`);
             }
         } catch (error) {
             console.log("Error checking out", error)

@@ -72,6 +72,7 @@ function Checkout({ cart }) {
   async function handleCheckout() {
     await checkOutCart(arrayOfCartItemId);
     await fetchCart(user.id);
+    alert("Thank you for shopping with us")
   }
   return (
     <div className="checkoutSummary">
@@ -121,8 +122,8 @@ function CartComponent({ user, item }) {
     await fetchCart(user.id);
   }
 
-  async function deleteItem(id, num) {
-    await removeFromCart(id, num);
+  async function deleteItem(id) {
+    await removeFromCart(id, 0);
     await fetchCart(user.id);
   }
   return (
@@ -174,7 +175,7 @@ function CartComponent({ user, item }) {
                 </button>
               </div>
             </form>
-            <button onClick={() => deleteItem(item.id, 0)} className="cartDeleteButton">Delete item</button>
+            <button onClick={() => deleteItem(item.id)} className="cartDeleteButton">Delete item</button>
           </div>
         </div>
         <p className="cartDescription">{item.product.description}</p>
