@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './components/Home.jsx'
+import Home from './components/Home/Home.jsx'
 import './index.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './components/Login.jsx'
+import Login from './components/Login-Register/Login.jsx'
 import Register from './components/Register.jsx'
-import Cart from './components/Cart.jsx'
-import Account from './components/Account.jsx'
+import Cart from './components/Cart/Cart.jsx'
+import Account from './components/Account/Account.jsx'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
-import SingleProduct from './components/SingleProduct.jsx'
+import SingleProduct from './components/SingleProduct/SingleProduct.jsx'
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([

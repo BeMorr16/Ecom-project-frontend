@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import "./App.css";
 import axios from "axios";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useUserCart } from "../store/user-cart";
+import { useUserCart } from "../../store/user-cart";
 
 async function getProducts(selectedCategory) {
   try {

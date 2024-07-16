@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useUserCart } from "../store/user-cart";
+import { useUserCart } from "../../store/user-cart";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 
 export default function Account() {
   const [editMode, setEditMode] = useState(false);

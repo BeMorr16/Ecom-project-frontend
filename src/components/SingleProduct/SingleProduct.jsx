@@ -3,8 +3,8 @@
 import { useQuery } from "@tanstack/react-query"
 import axios from "axios";
 import { useParams } from "react-router";
-import Navbar from "./Navbar";
-import { useUserCart } from "../store/user-cart";
+import Navbar from "../Navbar";
+import { useUserCart } from "../../store/user-cart";
 import { useState } from "react";
 
 

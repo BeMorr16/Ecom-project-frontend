@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import { useUserCart } from "../store/user-cart";
-import Navbar from "./Navbar";
+import { useUserCart } from "../../store/user-cart";
+import Navbar from "../Navbar";
 
 
 export default function Login() {

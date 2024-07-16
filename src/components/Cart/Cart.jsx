@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router";
-import { useUserCart } from "../store/user-cart";
-import Navbar from "./Navbar";
+import { useUserCart } from "../../store/user-cart";
+import Navbar from "../Navbar";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
