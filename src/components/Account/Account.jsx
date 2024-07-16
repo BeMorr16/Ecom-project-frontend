@@ -3,17 +3,17 @@ import { useUserCart } from "../../store/user-cart";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import Navbar from "../Navbar";
+import { compare } from 'bcryptjs';
 
 export default function Account() {
   const [editMode, setEditMode] = useState(false);
-  const { user, setUser, cart } = useUserCart();
+  const { user, setUser } = useUserCart();
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [email, setEmail] = useState(user.email);
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-console.log(cart)
   const editMutation = useMutation({
     mutationFn: editProfile,
     onSuccess: () => {
@@ -32,6 +32,7 @@ console.log(cart)
         },
       }
     );
+    console.log("response from edit", response)
     if (response.data) {
       setUser({
         token,
@@ -47,12 +48,12 @@ console.log(cart)
 
   function submit(e) {
     e.preventDefault();
-    if (passwordConfirm === user.password) {
+    if (compare(passwordConfirm, user.password)) {
       const info = {
         firstName: firstName ? firstName : "User",
         lastName: lastName ? lastName : "NoName",
         email: email,
-        password: password ? password : passwordConfirm,
+        password: (password.length > 0) ? password : passwordConfirm,
       };
       editMutation.mutate(info);
       setPassword("")
