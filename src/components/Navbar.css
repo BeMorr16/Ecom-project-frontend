@@ -1,0 +1,81 @@
+.navbar{
+    display: flex;
+    
+    box-shadow: 7px 10px 5px rgb(84, 89, 116);
+    padding: 1.5rem;
+    background: #e9f4ff;
+    background-image: url("");
+    justify-content: space-evenly;
+    
+}
+
+.shopping {
+    margin-top: 5px
+}
+.link-container .link {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+.link-container .link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust based on your text size */
+  width: 100%;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover effect */
+.link-container .link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.link-container .link:hover {
+  color: #0056b3;
+}
+
+
+
+
+
+
+.log {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+.log::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust based on your text size */
+  width: 100%;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover effect */
+.log:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.log:hover {
+  color: #0056b3;
+}
