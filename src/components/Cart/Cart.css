@@ -7,10 +7,11 @@
 .cartOuterContainer {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 95%;
     gap: 20px;
     padding: 20px;
     background-color: #f4f4f4;
+    margin: 30px auto 0 auto;
 }
 
 .cartContainer {
@@ -177,4 +178,10 @@ h2 {
 
   button{
     border-color:#666;
+  }
+  
+  .cartDeleteButton{
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
   }

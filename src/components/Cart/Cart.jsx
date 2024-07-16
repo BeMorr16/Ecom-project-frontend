@@ -14,7 +14,7 @@ export default function Cart() {
   useEffect(() => {
     setCartToMap(cart);
   }, [cart]);
-  
+
   if (!loggedIn) {
     return (
       <div>
@@ -174,7 +174,7 @@ function CartComponent({ user, item }) {
                 </button>
               </div>
             </form>
-            <button onClick={() => deleteItem(item.id, 0)}>Delete item</button>
+            <button onClick={() => deleteItem(item.id, 0)} className="cartDeleteButton">Delete item</button>
           </div>
         </div>
         <p className="cartDescription">{item.product.description}</p>
