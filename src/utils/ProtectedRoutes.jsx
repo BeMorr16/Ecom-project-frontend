@@ -23,7 +23,6 @@ const ProtectedRoutes = () => {
                     Authorization: `Bearer ${token}`
                 }
             });
-            console.log("response from auth", response)
             const { firstName, lastName, email, id, password} = response.data;
             setUser({
                 token,
@@ -33,7 +32,6 @@ const ProtectedRoutes = () => {
                 email, 
                 password,
             })
-            console.log("user has been set", user)
             setLoggedIn(true);
             fetchCart(id)
             return response.data;
