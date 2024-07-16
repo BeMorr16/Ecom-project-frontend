@@ -4,9 +4,9 @@
     box-shadow: 7px 10px 5px rgb(84, 89, 116);
     padding: 1.5rem;
     background: #e9f4ff;
-    background-image: url("");
+   
     justify-content: space-evenly;
-    
+    width: 100%;
 }
 
 .shopping {
@@ -21,6 +21,8 @@
   margin-right: 1rem;
   transition: color 0.3s;
 }
+
+/* Bottom underline animation */
 .link-container .link::after {
   content: '';
   position: absolute;
@@ -34,8 +36,23 @@
   transition: transform 0.3s ease-out;
 }
 
-/* Hover effect */
-.link-container .link:hover::after {
+/* Top underline animation */
+.link-container .link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px; /* Adjust based on your text size */
+  width: 100%;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover effect for both top and bottom */
+.link-container .link:hover::after,
+.link-container .link:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -55,6 +72,7 @@
   text-decoration: none;
   display: inline-block;
   margin-left: 1rem;
+  margin-right: 1rem;
   transition: color 0.3s;
 }
 .log::after {
@@ -69,9 +87,21 @@
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-
+.log::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px; /* Adjust based on your text size */
+  width: 100%;
+  height: 2px; /* Adjust thickness of the underline */
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease-out;
+}
 /* Hover effect */
-.log:hover::after {
+.log:hover::after,
+.log:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
