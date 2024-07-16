@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import "./App.css";
+import "../App.css";
 import axios from "axios";
 import Navbar from "../Navbar";
 import { useState } from "react";

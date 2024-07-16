@@ -1,0 +1,181 @@
+.loginContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+    align-items: center;
+  }
+
+.LoginFormContainer {
+    background-color: #ffffff;
+    max-width: 360px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #5c5de1;
+}
+
+button {
+    width: 100%;
+    background-color: #5c5de1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4949a3;
+}
+
+.ToRegistrationContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ToRegistrationContainer h3 {
+    color: #333;
+}
+
+.ToRegistrationContainer button {
+    background-color: transparent;
+    border: none;
+    color: #5c5de1;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ToRegistrationContainer button:hover {
+    text-decoration: underline;
+}
+
+.loginImageContainer {
+    width: 50%; 
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/midnight-starry-night-with-forest-evergreen-trees_23-2148283406.jpg?t=st=1721142354~exp=1721145954~hmac=c138fcdb50afef8043b17026ae09df75fb397a15a0ed0777f4cca8bdf25d51cb&w=740');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+/* REGISTER */
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .registerFormContainer {
+    background-color: #ffffff;
+    max-width: 360px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registerTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #5c5de1;
+  }
+  
+  .registerButton {
+    width: 100%;
+    background-color: #5c5de1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .registerButton:hover {
+    background-color: #4949a3;
+  }
+  
+  .registerToLoginContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .registerToLoginContainer h3 {
+    color: #333;
+  }
+  
+  .registerToLoginContainer button {
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .registerToLoginContainer button:hover {
+    text-decoration: underline;
+  }
+  
+
+  input[type="email"],
+input[type="password"],
+.registerInput {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus,
+.registerInput:focus {
+  outline: none;
+  border-color: #5c5de1;
+}
