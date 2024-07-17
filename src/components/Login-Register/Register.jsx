@@ -53,19 +53,23 @@ export default function Register() {
   return (
     <>
       <Navbar />
-      <h1>Registration</h1>
+      <div className="loginContainer">
+      <div className = "LoginFormContainer">
+      <h1 className="Login-Register-h1">Registration</h1>
       <form onSubmit={submit}>
         <input value={firstName} placeholder="First Name" onChange={(e) => setFirstName(e.target.value)} />
         <input value={lastName} placeholder="Last Name" onChange={(e)=> setLastName(e.target.value)} />
         <input type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
         <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-        <button disabled={!email || !password || password.length < 4}>
+        <button className= "LoginButton" disabled={!email || !password || password.length < 4}>
           {registerMutation.isPending ? "Loading" : "Register"}
         </button>
       </form>
       {registerMutation.isError && (
         <div>{registerMutation.error?.response?.data?.message || registerMutation.error.message}</div>
       )}
+      </div>
+      </div>
     </>
   )
 }

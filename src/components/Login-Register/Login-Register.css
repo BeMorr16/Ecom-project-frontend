@@ -1,7 +1,8 @@
 .loginContainer {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Ensure items are spaced evenly */
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -14,9 +15,9 @@
     margin-right: 50px;
 }
 
-h1 {
+h1.Login-Register-h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #333;
 }
 
@@ -37,7 +38,7 @@ input[type="password"]:focus {
     border-color: #5c5de1;
 }
 
-button {
+.LoginButton {
     width: 100%;
     background-color: #5c5de1;
     color: white;
@@ -49,7 +50,7 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+.LoginButton:hover {
     background-color: #4949a3;
 }
 
@@ -74,7 +75,7 @@ button:hover {
     text-decoration: underline;
 }
 
-.loginImageContainer {
+.Login-image-container {
     width: 50%; 
     height: 100vh;
     background-image: url('https://img.freepik.com/free-photo/midnight-starry-night-with-forest-evergreen-trees_23-2148283406.jpg?t=st=1721142354~exp=1721145954~hmac=c138fcdb50afef8043b17026ae09df75fb397a15a0ed0777f4cca8bdf25d51cb&w=740');

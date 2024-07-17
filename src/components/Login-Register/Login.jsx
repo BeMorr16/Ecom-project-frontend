@@ -48,7 +48,7 @@ export default function Login() {
       <Navbar />
       <div className="loginContainer">
         <div className="LoginFormContainer">
-          <h1>Login</h1>
+          <h1 className="Login-Register-h1">Login</h1>
           <form onSubmit={submit}>
             <input
               type="email"
@@ -62,7 +62,7 @@ export default function Login() {
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button disabled={!email || !password}>
+            <button className="LoginButton" disabled={!email || !password}>
               {loginMutation.isPending ? "Loading" : "Login"}
             </button>
           </form>
@@ -74,7 +74,7 @@ export default function Login() {
           )}
                   <div className="loginToRegistrationContainer">
           <h3>If you don&#39;t have an account Register</h3>
-          <button onClick={() => navigate("/register")}>Here</button>
+          <button className="LoginButton" onClick={() => navigate("/register")}>Here</button>
         </div>
         </div>
         </div>
